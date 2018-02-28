@@ -1,6 +1,6 @@
 node {
    stage('Build') {
-         git 'https://github.com/veereshwaran/queue-master/'
+         git 'https://github.com/appranix-demo/queue-master/'
          sh 'mvn -DskipTests package'
          sh "echo build docker"
          sh "docker build -t veeresh27/queue-master:${env.BUILD_ID} ."
